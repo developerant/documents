@@ -1,4 +1,6 @@
-# Add user
+# MySQL Commands
+
+## Add user
 
 CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 
@@ -6,7 +8,7 @@ GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
 
 FLUSH PRIVILEGES;
 
-# Permissions
+## Permissions
 
 Here is a short list of other common possible permissions that users can enjoy.
 
