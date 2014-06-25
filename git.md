@@ -1,6 +1,6 @@
 # Git
 
-# Standard setup
+### Standard setup
 
 ```bash
 git init
@@ -14,7 +14,7 @@ git commit -m "commit message"
 
 or git commit followed by typing message and :wq in vi
 
-# Other Commands
+### Other Commands
 
 Show origin
 ```bash
