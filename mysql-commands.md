@@ -1,6 +1,19 @@
 # MySQL Commands
 
-## Add user
+### Add DB
+
+CREATE DATABASE db_name;
+
+### Drop DB
+
+DROP DATABASE db_name;
+FLUSH PRIVILEGES;
+
+### Show DBs
+
+SHOW databases;
+
+### Add user
 
 CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 
@@ -8,7 +21,29 @@ GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
 
 FLUSH PRIVILEGES;
 
-## Permissions
+### Drop user
+
+DROP USER 'anthony'@'localhost';
+
+### Show users
+
+SELECT User, Host, Password FROM mysql.user;
+
+### Set password
+
+SET PASSWORD FOR 'user'@'localhost' = PASSWORD('enterpassword');
+
+### Grant Privileges
+
+GRANT ALL PRIVILEGES ON db_name.* to username@localhost;
+
+### Show grants
+
+SHOW GRANTS;
+
+SHOW GRANTS FOR 'user'@'localhost';
+
+### Permissions
 
 Here is a short list of other common possible permissions that users can enjoy.
 
@@ -30,3 +65,7 @@ GRANT OPTION- allows them to grant or remove other users' privileges
 
 
 GRANT [type of permission] ON [database name].[table name] TO ‘[username]’@'localhost’;
+
+### Login
+
+mysql -u username -p
