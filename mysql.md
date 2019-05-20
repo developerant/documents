@@ -69,3 +69,11 @@ GRANT [type of permission] ON [database name].[table name] TO ‘[username]’@'
 ### Login
 
 mysql -u username -p
+
+## String Replace
+UPDATE your_table
+SET your_field = REPLACE(your_field, 'articles/updates/', 'articles/news/')
+WHERE your_field LIKE '%articles/updates/%'
+
+## DB Dump
+mysqldump -u user -p dbname > dbname.sql;
